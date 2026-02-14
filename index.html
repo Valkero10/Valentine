@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine?</title>
+
+<style>
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Arial;
+    background: pink;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 120px;
+    font-size: 40px;
+}
+
+button {
+    font-size: 22px;
+    padding: 12px 25px;
+    margin: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+#noBtn {
+    position: absolute;
+}
+
+/* Corazones flotando */
+.heart {
+    position: fixed;
+    color: red;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Música romántica -->
+<audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
+
+<h1>Do you wanna be my Valentine, Sofia? 💘</h1>
+<!-- 👆 CAMBIA EL NOMBRE AQUÍ -->
+
+<button onclick="yesClicked()">YES 💖</button>
+<button id="noBtn">NO 😒</button>
+
+<script>
+
+/* Botón YES */
+function yesClicked() {
+    window.location.href = "yes.html";
+}
+
+/* Botón NO que huye */
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", function() {
+    noBtn.style.top = Math.random() * window.innerHeight + "px";
+    noBtn.style.left = Math.random() * window.innerWidth + "px";
+});
+
+/* Crear corazones */
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 300);
+
+</script>
+
+</body>
+</html>
