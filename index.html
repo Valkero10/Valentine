@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <title>For Rhea 💘</title>
 
-<!-- Fuente estilo Disney -->
-<style>
-@import url('https://fonts.cdnfonts.com/css/waltograph');
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
+<style>
 body {
     margin: 0;
     height: 100vh;
@@ -16,7 +15,7 @@ body {
     align-items: center;
     text-align: center;
     background-color: pink;
-    font-family: 'Waltograph', cursive;
+    font-family: 'Playfair Display', serif;
 }
 
 .container {
@@ -24,24 +23,30 @@ body {
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 38px;
     color: black;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .buttons {
     margin-top: 40px;
+    position: relative;
 }
 
 button {
-    font-family: Arial, sans-serif;
     font-size: 18px;
     padding: 10px 25px;
     margin: 15px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 6px;
     border: 1px solid black;
     background: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: black;
+    color: white;
 }
 
 #noBtn {
@@ -52,29 +57,21 @@ button {
 
 <body>
 
-<!-- Música Perfect (YouTube oculto) -->
-<iframe width="0" height="0"
-src="https://www.youtube.com/embed/817P8W8-mGE?autoplay=1&loop=1&playlist=817P8W8-mGE"
-frameborder="0"
-allow="autoplay">
-</iframe>
-
 <div class="container">
     <h1>
         From the moment I met you,<br>
         I just wanna ask you,<br>
         Rhea,<br><br>
-        do you wanna be my Valentine? 💘
+        do you wanna be my Valentine?
     </h1>
 
     <div class="buttons">
-        <button onclick="yesClicked()">Yes 🤍</button>
+        <button onclick="yesClicked()">Yes</button>
         <button id="noBtn">No</button>
     </div>
 </div>
 
 <script>
-
 function yesClicked() {
     window.location.href = "yes.html";
 }
@@ -82,10 +79,9 @@ function yesClicked() {
 const noBtn = document.getElementById("noBtn");
 
 noBtn.addEventListener("mouseover", function() {
-    noBtn.style.top = Math.random() * window.innerHeight + "px";
-    noBtn.style.left = Math.random() * window.innerWidth + "px";
+    noBtn.style.top = Math.random() * 200 + "px";
+    noBtn.style.left = Math.random() * 300 + "px";
 });
-
 </script>
 
 </body>
