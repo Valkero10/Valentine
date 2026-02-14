@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Yay!</title>
+
+<style>
+body {
+    background: pink;
+    text-align: center;
+    font-family: Arial;
+    color: white;
+}
+
+h1 {
+    margin-top: 150px;
+    font-size: 50px;
+}
+
+p {
+    font-size: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Música -->
+<audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+</audio>
+
+<h1>YAY!!! 💖</h1>
+
+<p>I knew you would say YES 😌</p>
+
+<p>You just made me the happiest person today 💘</p>
+
+<p>Now you officially owe me a date 🍓✨</p>
+
+</body>
+</html>
